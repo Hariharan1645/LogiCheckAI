@@ -1,0 +1,94 @@
+[
+  {
+    "original_sentence": "leke nabh naakli dhavayi lere ho",
+    "normalized_claim": "leke nabh fake medicine lere ho.",
+    "timestamp": {
+      "start": 1.52,
+      "end": 2.82
+    },
+    "verdict": "FALSE / MISLEADING",
+    "evidence": [
+      {
+        "id": "WHO_FAKE_MEDICINE_001",
+        "text": "The World Health Organization states that counterfeit or fake medical products can cause serious health risks and may contain incorrect ingredients or dosages.",
+        "source": "WHO",
+        "reliability": 0.95
+      },
+      {
+        "id": "GOV_FAKE_DRUGS_002",
+        "text": "Government health agencies warn that fake medicines reduce treatment effectiveness and can lead to drug resistance or treatment failure.",
+        "source": "Government Health Portal",
+        "reliability": 0.9
+      },
+      {
+        "id": "GENERIC_MEDICINE_003",
+        "text": "Medicines should only be purchased from licensed pharmacies to ensure authenticity and safety.",
+        "source": "Public Health Advisory",
+        "reliability": 0.85
+      }
+    ],
+    "nli_results": [
+      {
+        "evidence": "The World Health Organization states that counterfeit or fake medical products can cause serious health risks and may contain incorrect ingredients or dosages.",
+        "label": "CONTRADICTION",
+        "confidence": 0.536
+      },
+      {
+        "evidence": "Government health agencies warn that fake medicines reduce treatment effectiveness and can lead to drug resistance or treatment failure.",
+        "label": "CONTRADICTION",
+        "confidence": 0.551
+      },
+      {
+        "evidence": "Medicines should only be purchased from licensed pharmacies to ensure authenticity and safety.",
+        "label": "CONTRADICTION",
+        "confidence": 0.769
+      }
+    ]
+  },
+  {
+    "original_sentence": "leke ye asli ho rske ya dhavayi to hai ye nahi",
+    "normalized_claim": "leke ye asli ho rske ya medicine to hai ye nahi.",
+    "timestamp": {
+      "start": 11.120000000000001,
+      "end": 13.06
+    },
+    "verdict": "FALSE / MISLEADING",
+    "evidence": [
+      {
+        "id": "GOV_FAKE_DRUGS_002",
+        "text": "Government health agencies warn that fake medicines reduce treatment effectiveness and can lead to drug resistance or treatment failure.",
+        "source": "Government Health Portal",
+        "reliability": 0.9
+      },
+      {
+        "id": "GENERIC_MEDICINE_003",
+        "text": "Medicines should only be purchased from licensed pharmacies to ensure authenticity and safety.",
+        "source": "Public Health Advisory",
+        "reliability": 0.85
+      }
+    ],
+    "nli_results": [
+      {
+        "evidence": "Government health agencies warn that fake medicines reduce treatment effectiveness and can lead to drug resistance or treatment failure.",
+        "label": "CONTRADICTION",
+        "confidence": 0.544
+      },
+      {
+        "evidence": "Medicines should only be purchased from licensed pharmacies to ensure authenticity and safety.",
+        "label": "CONTRADICTION",
+        "confidence": 0.498
+      }
+    ]
+  },
+  {
+    "original_sentence": "leke niye naakli dhringh so iitne zada kata naak hai",
+    "normalized_claim": "leke niye naakli dhringh so iitne zada kata naak hai.",
+    "timestamp": {
+      "start": 23.62,
+      "end": 25.96
+    },
+    "verdict": "INSUFFICIENT_EVIDENCE",
+    "evidence": [],
+    "nli_results": []
+  }
+]
