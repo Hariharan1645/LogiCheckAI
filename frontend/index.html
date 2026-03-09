@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiCheck AI - Professional Video Analysis</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🔍</span>
+                <h1>LogiCheck <span class="accent-text">AI</span></h1>
+            </div>
+            <nav class="header-nav">
+                <span class="badge">Healthcare Misinformation Analysis System</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        
+        <!-- Top Section: Upload & Video Player -->
+        <section class="media-section box-shadow">
+            <div class="upload-container">
+                <h2>Analyze a Video</h2>
+                <form id="upload-form" class="upload-form">
+                    <input type="file" id="video-file" accept="video/mp4,video/x-m4v,video/*" required class="file-input">
+                    <button type="submit" id="analyze-btn" class="primary-btn">Upload & Check Facts</button>
+                </form>
+                <div id="loading-state" class="hidden loading-bar">
+                    <p>Extracting Audio, Processing Claims & Validating Evidence... Please Wait.</p>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+
+            <!-- Video Player -->
+            <div id="video-container" class="video-container hidden">
+                <video id="source-video" controls>
+                    Your browser does not support the video element.
+                </video>
+            </div>
+        </section>
+
+        <!-- Results Dashboard (Hidden until processing completes) -->
+        <div id="results-dashboard" class="hidden">
+            
+            <hr class="divider">
+            
+            <!-- Top Widgets Row -->
+            <div class="widgets-row">
+                <!-- Verdict Widget -->
+                <div class="widget box-shadow" id="verdict-widget">
+                    <h3 class="widget-title">Overall Video Verdict</h3>
+                    <div class="verdict-display" id="verdict-display">
+                        <span id="verdict-icon">❓</span>
+                        <h2 id="verdict-text">Analyzing...</h2>
+                    </div>
+                </div>
+
+                <!-- Credibility Widget -->
+                <div class="widget box-shadow" id="credibility-widget">
+                    <h3 class="widget-title">Creator Credibility</h3>
+                    <div class="score-display">
+                        <span id="score-number" class="score-number">--</span>
+                        <span class="score-percentage">%</span>
+                    </div>
+                    <p id="score-rating" class="rating-text">Pending...</p>
+                </div>
+                
+                <!-- Stats Summary Widget -->
+                <div class="widget box-shadow">
+                    <h3 class="widget-title">Analysis Summary</h3>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-num" id="stat-claims">0</span>
+                            <span class="stat-lbl">Claims</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" id="stat-conflicts">0</span>
+                            <span class="stat-lbl">Conflicts</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num" id="stat-manipulation">0</span>
+                            <span class="stat-lbl">Flags</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logical Conflicts Section (Hidden by default) -->
+            <div id="conflicts-section" class="conflicts-section box-shadow hidden">
+                <div class="conflict-header">
+                    <span class="warning-icon">⚠️</span>
+                    <h3>Logical Contradictions Detected</h3>
+                </div>
+                <div id="conflicts-list" class="conflicts-list">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+
+            <!-- Claims Breakdown -->
+            <div class="claims-header-row">
+                <h2>Fact Check Breakdown</h2>
+                <p class="helper-text">Click a timestamp to play that exact moment in the video.</p>
+            </div>
+            
+            <div id="claims-container" class="claims-container">
+                <!-- Dynamically populated by app.js -->
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p id="disclaimer-text">This tool is for educational and informational purposes only and does not replace professional medical advice.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
