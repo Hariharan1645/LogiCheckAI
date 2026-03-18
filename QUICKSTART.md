@@ -22,37 +22,6 @@ When you tried to analyze a YouTube Shorts video, the frontend had no backend to
 
 ---
 
-## Environment Setup (IMPORTANT)
-
-### 1. Create `.env` File
-Before running the backend, you must set up API keys:
-
-```bash
-cd backend
-```
-
-Copy the template file:
-```bash
-cp .env.example .env
-```
-
-### 2. Add Your API Keys
-Edit `backend/.env` and add your actual API keys:
-```
-GROQ_API_KEY=your_actual_groq_api_key_here
-OPENAI_API_KEY=your_openai_api_key_here (optional)
-YOUTUBE_API_KEY=your_youtube_api_key_here (optional)
-```
-
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-**Note:** The `.env` file is **never** committed to git. It's added to `.gitignore` to protect your secrets.
-
----
-
 ## How to Run
 
 ### Step 1: Start the Backend Server

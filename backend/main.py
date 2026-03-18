@@ -18,8 +18,9 @@ import traceback
 from contextlib import asynccontextmanager
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# Load key values from .env
 load_dotenv()
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):

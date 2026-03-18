@@ -97,9 +97,10 @@
 
             <!-- Loading State -->
             <div id="loading-state" class="state-container hidden">
-                <div class="pulse-ring"></div>
-                <div class="loading-content">
+                <div class="pulse-ring">
                     <i class="fa-solid fa-circle-notch fa-spin loading-spinner"></i>
+                </div>
+                <div class="loading-content">
                     <h3>AI is analyzing the video</h3>
                     <p class="loading-step" id="loading-text">Extracting speech and converting to text...</p>
                     <div class="progress-bar-container">
@@ -122,6 +123,18 @@
                     <h3>Analysis Results</h3>
                     <span class="results-count" id="claims-count">0 claims detected</span>
                 </div>
+
+                <!-- AI Reasoning Container -->
+                <div id="ai-reasoning-container" class="reasoning-container hidden">
+                    <div class="reasoning-header">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <h4>AI Analysis Reasoning</h4>
+                    </div>
+                    <div id="ai-reasoning-content" class="reasoning-content">
+                        <!-- Content will be injected dynamically -->
+                    </div>
+                </div>
+
                 <div class="claims-list" id="claims-list">
                     <!-- Claims will be injected here dynamically -->
                 </div>
