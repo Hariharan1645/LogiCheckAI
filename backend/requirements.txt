@@ -1,0 +1,12 @@
+txt
+fastapi
+uvicorn
+youtube-transcript-api
+requests
+beautifulsoup4
+numpy
+scikit-learn
+sentence-transformers
+openai-whisper
+yt-dlp
+python-dotenv
